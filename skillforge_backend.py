@@ -838,5 +838,48 @@ def analyze_text():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api/chat', methods=['POST'])
+def chat():
+    try:
+        data = request.get_json()
+        user_message = data.get('message', '').lower().strip()
+        
+        # Knowledge Base
+        kb = {
+            "analyze": "SkillForge AI uses a advanced neural matching engine based on TF-IDF vectorization and Cosine Similarity to compare your resume keywords with job description requirements. It doesn't just look for exact matches but understands domain relationships.",
+            "skillgap": "The SkillGap Navigator identifies critical missing skills in your profile compared to the job market. For each gap, we provide a priority level, estimated time to master, and direct links to curated courses on YouTube, Coursera, and Kaggle.",
+            "roadmap": "Our Career Roadmap is an AI-generated timeline that breaks down your upskilling journey into four phases: Foundation Building, Hands-On Practice, Skill Expansion, and Job Preparation. It gives you clear milestones to track your progress.",
+            "score": "You can improve your resume score by adding quantifiable metrics (e.g., 'Increased revenue by 20%'), ensuring clinical keywords from the Job Description are present, and maintaining a professional structure with clear contact information.",
+            "download": "You can download a comprehensive Career Intelligence Report in PDF format from the 'Analysis Results' page. We also offer a 'Standard Resume' generator that reformats your data into a professional, ATS-friendly template.",
+            "jobs": "Yes! SkillForge AI helps you find jobs by generating direct search links to platforms like LinkedIn, Indeed, and Google Jobs, pre-filtered with the skills we've matched in your profile.",
+            "who": "I am SkillForge AI, your dedicated Career Intelligence Assistant. I'm here to help you bridge the gap between your current skills and your dream career goals.",
+            "creator": "SkillForge AI was architected by elite career strategists and AI engineers to democratize high-end career coaching."
+        }
+
+        # Simple intent matching
+        response = ""
+        if any(word in user_message for word in ["how", "analyze", "method", "work"]):
+            response = kb["analyze"]
+        elif any(word in user_message for word in ["gap", "navigator", "missing"]):
+            response = kb["skillgap"]
+        elif any(word in user_message for word in ["roadmap", "timeline", "journey", "plan"]):
+            response = kb["roadmap"]
+        elif any(word in user_message for word in ["score", "improve", "increase", "better"]):
+            response = kb["score"]
+        elif any(word in user_message for word in ["download", "report", "pdf", "save"]):
+            response = kb["download"]
+        elif any(word in user_message for word in ["job", "career", "search", "find"]):
+            response = kb["jobs"]
+        elif any(word in user_message for word in ["who", "what", "are you"]):
+            response = kb["who"]
+        elif any(word in user_message for word in ["creator", "made", "built"]):
+            response = kb["creator"]
+        else:
+            response = "That's a great question! While I'm still learning, I can specifically help you with details about Resume Analysis, SkillGaps, Roadmaps, and Job Search. Ask me something like 'How can I improve my score?'"
+
+        return jsonify({"response": response})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000, use_reloader=False)
