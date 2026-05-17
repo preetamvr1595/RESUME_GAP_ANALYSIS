@@ -1,0 +1,23 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.12.1
+2 info using node@v24.15.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npmrc
+5 silly config load:file:C:\Users\praveen\.npmrc
+6 silly config load:file:C:\Users\praveen\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm exec localtunnel --port 5000
+8 verbose argv "exec" "--yes" "--" "localtunnel" "--port" "5000"
+9 verbose logfile logs-max:10 dir:E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npm-cache\_logs\2026-05-16T04_35_23_851Z-
+10 verbose logfile E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npm-cache\_logs\2026-05-16T04_35_23_851Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+14 http fetch GET 200 https://registry.npmjs.org/localtunnel 2852ms (cache revalidated)
+15 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+16 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+17 verbose cwd E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI
+18 verbose os Windows_NT 10.0.26100
+19 verbose node v24.15.0
+20 verbose npm  v11.12.1
+21 verbose exit 1
+22 verbose code 1

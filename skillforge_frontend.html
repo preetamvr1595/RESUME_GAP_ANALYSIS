@@ -2401,7 +2401,10 @@
     // ─────────────────────────────────────────────
     // STATE
     // ─────────────────────────────────────────────
-    const API = window.location.protocol === 'file:' ? 'http://127.0.0.1:5000' : window.location.protocol + '//' + window.location.hostname + ':5000';
+    const IS_LOCAL = window.location.protocol === 'file:' || window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost';
+    // For local testing it uses localhost:5000, but in production it uses your deployed backend URL.
+    // Make sure to replace YOUR_RENDER_APP_URL with your actual Render URL when you deploy.
+    const API = IS_LOCAL ? 'http://127.0.0.1:5000' : 'https://YOUR_RENDER_APP_URL.onrender.com';
     let state = {
       user: null,
       analysisResult: null,

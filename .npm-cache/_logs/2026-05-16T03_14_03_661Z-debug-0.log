@@ -1,0 +1,28 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@11.12.1
+2 info using node@v24.15.0
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npmrc
+5 silly config load:file:C:\Users\praveen\.npmrc
+6 silly config load:file:C:\Users\praveen\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm exec lt --port 8080
+8 verbose argv "exec" "--yes" "--" "lt" "--port" "8080"
+9 verbose logfile logs-max:10 dir:E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npm-cache\_logs\2026-05-16T03_14_03_661Z-
+10 verbose logfile E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npm-cache\_logs\2026-05-16T03_14_03_661Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2348810240 maxSize:587202560 maxEntrySize:293601280
+13 http fetch GET 200 https://registry.npmjs.org/lt 501ms (cache miss)
+14 verbose stack Error: could not determine executable to run
+14 verbose stack     at getBinFromManifest (C:\Program Files\nodejs\node_modules\npm\node_modules\libnpmexec\lib\get-bin-from-manifest.js:17:23)
+14 verbose stack     at exec (C:\Program Files\nodejs\node_modules\npm\node_modules\libnpmexec\lib\index.js:211:15)
+14 verbose stack     at async Npm.exec (C:\Program Files\nodejs\node_modules\npm\lib\npm.js:193:9)
+14 verbose stack     at async module.exports (C:\Program Files\nodejs\node_modules\npm\lib\cli\entry.js:67:5)
+15 verbose pkgid lt@0.3.3
+16 error could not determine executable to run
+17 verbose cwd E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI
+18 verbose os Windows_NT 10.0.26100
+19 verbose node v24.15.0
+20 verbose npm  v11.12.1
+21 verbose exit 1
+22 verbose code 1
+23 error A complete log of this run can be found in: E:\RESUME_GAP_ANALYSIS_NEW\RESUME-GAP-AI\.npm-cache\_logs\2026-05-16T03_14_03_661Z-debug-0.log

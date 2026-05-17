@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "serve": "^14.2.6"
+  },
+  "_npx": {
+    "packages": [
+      "serve"
+    ]
+  }
+}
