@@ -715,7 +715,7 @@ def generate_standard_resume_pdf(data, user_name="Candidate"):
 # ─────────────────────────────────────────────
 @app.route('/', methods=['GET'])
 def index():
-    return send_file('skillforge_frontend.html')
+    return send_file('index.html')
 
 @app.route('/health', methods=['GET'])
 def health():
