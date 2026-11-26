@@ -1,7 +1,8 @@
 # ⚡ SkillForge AI — Career Intelligence Platform
 
 > Intelligent Resume Analyzer & Career Roadmap System  
-> Full-Stack AI SaaS Web Application
+> Full-Stack AI SaaS Web Application  
+> Built with Python, Flask & Modern Frontend Technologies
 
 ---
 
